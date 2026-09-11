@@ -1,13 +1,5 @@
 # -*- coding: utf-8 -*-
-"""C题问题2改进版：历史滚动预测 + 净负荷分位数 + 48小时滚动MILP。
 
-核心原则：
-1. 日期d的计划只使用d日0:00以前的附件2数据；
-2. 负荷用最近4个同星期几预测，光伏用最近7日同时间均值预测；
-3. 对净负荷误差而非负荷/PV误差分别加裕度；
-4. 优化未来48小时，但仅执行前24小时，第二天重新预测与优化；
-5. 用当天真实数据事后回放，缺口按5倍价格紧急购电。
-"""
 from __future__ import annotations
 
 import argparse
@@ -108,7 +100,7 @@ def net_margin(issue_idx, actual_net, predicted_net, risk_q):
         return np.zeros(N)
     errors = actual_net[valid] - predicted_net[valid]
     margin = np.quantile(errors, risk_q, axis=0)
-    # 三点中位数抑制单个十分钟格的偶然尖峰，不跨日期使用未来信息。
+    # 三点中位数抑制单个十分钟格的偶然尖峰。
     padded = np.pad(margin, (1, 1), mode="edge")
     return np.median(np.vstack([padded[:-2], padded[1:-1], padded[2:]]), axis=0)
 

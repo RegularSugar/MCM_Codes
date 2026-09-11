@@ -1,2 +1,0 @@
-﻿method,risk_q,horizon_days,days,plan_cost_yuan,emergency_cost_yuan,total_cost_yuan,planned_grid_kWh,emergency_grid_kWh,emergency_days,emergency_intervals,min_soc_kWh,max_soc_kWh,max_plan_balance_residual_kWh,max_actual_balance_residual_kWh,max_soc_residual_kWh,simultaneous_periods,total_solve_time_s
-net-load quantile + rolling horizon MILP,0.6,2,334,12517851.481874647,3119271.518969214,15637123.00084386,20601953.736367617,813986.2761257074,334,4552,1200.0,10800.0,5.4166666700439237e-05,1.1368683772161603e-13,0.0005623733341053594,0,67.93181290000211
