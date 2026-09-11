@@ -1,0 +1,2 @@
+max_balance_residual_kWh,max_state_residual_kWh,min_SOC_kWh,max_SOC_kWh,max_charge_kWh,max_discharge_kWh,simultaneous_charge_discharge_periods,terminal_SOC_error_kWh
+5.3333333426053287e-05,0.00047300000105110485,1200.0,10800.0,833.33333,715.65303,0,0.0

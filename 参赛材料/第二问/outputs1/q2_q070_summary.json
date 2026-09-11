@@ -1,0 +1,23 @@
+{
+  "new": {
+    "method": "net-load quantile + rolling horizon MILP",
+    "risk_q": 0.7,
+    "horizon_days": 2,
+    "days": 334,
+    "plan_cost_yuan": 12913166.424671497,
+    "emergency_cost_yuan": 2222671.9787732996,
+    "total_cost_yuan": 15135838.4034448,
+    "planned_grid_kWh": 21208429.8132726,
+    "emergency_grid_kWh": 580989.03878568,
+    "emergency_days": 331,
+    "emergency_intervals": 4177,
+    "min_soc_kWh": 1200.0,
+    "max_soc_kWh": 10800.0,
+    "max_plan_balance_residual_kWh": 5.3333333539740124e-05,
+    "max_actual_balance_residual_kWh": 1.1368683772161603e-13,
+    "max_soc_residual_kWh": 0.0005769888884969987,
+    "simultaneous_periods": 0,
+    "total_solve_time_s": 67.75584759991034
+  },
+  "old": null
+}
